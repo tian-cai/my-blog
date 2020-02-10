@@ -11,7 +11,7 @@ module.exports = {
           title: '数据结构',
           path: '/constractor/',
           collapsable: false, 
-          sidebarDepth: 1,
+          sidebarDepth: 2,
           children: [
             ['/constractor/stack','栈'],
             ['/constractor/queue','队列']
@@ -31,5 +31,8 @@ module.exports = {
       lastUpdated: 'Last Updated',
       repo: 'https://github.com/tian-cai/my-blog',
       editLinks: true,
+      docsDir: 'docs',
+      docsBranch: 'master',
+      displayAllHeaders: true,
     }
   }
