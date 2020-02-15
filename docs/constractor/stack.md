@@ -85,6 +85,30 @@ class Stack {
     }
 
     ```
+- [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
+
+    ```js
+    function evalRPN(tokens) {
+        const stack = new Stack()
+        const map = {
+            '+': (a, b) => a + b,
+            '-': (a, b) => a - b,
+            '*': (a, b) => a * b,
+            '/': (a, b) => Math.trunc(a / b)
+        }
+        tokens.forEach(ele => {
+            if (map.hasOwnProperty(ele)) {
+                const first = stack.pop()
+                const second = stack.pop()
+                let result = map[ele](second, first)
+                stack.push(result)
+            } else {
+                stack.push(Number(ele))
+            }
+        });
+        return stack.pop()
+    }
+    ```
 
 ### 参考文章
 - javascript数据结构与算法第三版
