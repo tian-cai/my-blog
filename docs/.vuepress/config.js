@@ -14,7 +14,8 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             ['/constractor/stack','栈'],
-            ['/constractor/queue','队列']
+            ['/constractor/queue','队列'],
+            ['/constractor/deque','双端队列']
           ]
         },
         {

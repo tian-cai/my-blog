@@ -4,3 +4,4 @@
 本栏的主要内容如下：
 - [栈](/constractor/stack)
 - [队列](/constractor/queue)
+- [双端队列](/constractor/deque)
