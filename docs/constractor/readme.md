@@ -7,3 +7,4 @@
 - [双端队列](deque)
 - [树](tree)
 - [最小堆](minheap)
+- [最大堆](maxheap)

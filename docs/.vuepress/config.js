@@ -17,7 +17,8 @@ module.exports = {
             ['/constractor/queue','队列'],
             ['/constractor/deque','双端队列'],
             ['/constractor/tree','树'],
-            ['/constractor/minheap','最小堆']
+            ['/constractor/minheap','最小堆'],
+            ['/constractor/maxheap','最大堆']
           ]
         },
         {
