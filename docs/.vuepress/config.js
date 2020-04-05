@@ -49,6 +49,6 @@ module.exports = {
       md.set({ html: true })
       md.use(require('markdown-it-katex'))
     }
-  }
-
+  },
+  plugins: ['@vuepress/back-to-top']
 }
