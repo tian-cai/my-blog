@@ -21,5 +21,8 @@
   "homepage": "https://github.com/tian-cai/my-blog#readme",
   "devDependencies": {
     "vuepress": "^1.2.0"
+  },
+  "dependencies": {
+    "markdown-it-katex": "^2.0.3"
   }
 }
