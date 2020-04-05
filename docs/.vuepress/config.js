@@ -50,5 +50,5 @@ module.exports = {
       md.use(require('markdown-it-katex'))
     }
   },
-  plugins: ['@vuepress/back-to-top']
+  plugins: ['@vuepress/back-to-top', 'one-click-copy']
 }

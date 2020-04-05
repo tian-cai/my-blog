@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/tian-cai/my-blog#readme",
   "devDependencies": {
-    "markdown-it-katex": "^2.0.3",
     "@vuepress/plugin-back-to-top": "^1.4.0",
-    "vuepress": "^1.2.0"
+    "markdown-it-katex": "^2.0.3",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-one-click-copy": "^1.0.2"
   }
 }
