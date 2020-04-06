@@ -29,7 +29,8 @@ module.exports = {
         children: [
           ['/algorithm/bubblesort', '冒泡排序'],
           ['/algorithm/selectionSort', '选择排序'],
-          ['/algorithm/insertSort', '插入排序']
+          ['/algorithm/insertSort', '插入排序'],
+          ['/algorithm/mergeSort', '归并排序']
         ]
       }
     ],
