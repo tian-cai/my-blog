@@ -27,7 +27,8 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 2,
         children: [
-          ['/algorithm/bubblesort', '冒泡排序']
+          ['/algorithm/bubblesort', '冒泡排序'],
+          ['/algorithm/selectionSort', '选择排序']
         ]
       }
     ],
