@@ -4,36 +4,26 @@ module.exports = {
   base: '/my-blog/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' }
-    ],
-    sidebar: [
+      { text: 'Home', link: '/' },
       {
-        title: '数据结构',
-        path: '/constractor/',
-        collapsable: false,
-        sidebarDepth: 2,
-        children: [
-          ['/constractor/stack', '栈'],
-          ['/constractor/queue', '队列'],
-          ['/constractor/deque', '双端队列'],
-          ['/constractor/tree', '树'],
-          ['/constractor/minheap', '最小堆'],
-          ['/constractor/maxheap', '最大堆']
+        text: '前端',
+        items: [
+          {
+            text: '数据结构与算法',
+            items: [
+              { text: '数据结构', link: '/constractor/' },
+              { text: '算法', link: '/algorithm/' }
+            ]
+          }
         ]
       },
-      {
-        title: '算法',
-        path: '/algorithm/',
-        collapsable: false,
-        sidebarDepth: 2,
-        children: [
-          ['/algorithm/bubblesort', '冒泡排序'],
-          ['/algorithm/selectionSort', '选择排序'],
-          ['/algorithm/insertSort', '插入排序'],
-          ['/algorithm/mergeSort', '归并排序']
-        ]
-      }
+      { text: '好文收藏', link: '/collectArticle/' }
     ],
+    sidebar: {
+      '/constractor/': getConstractorSidebar(),
+      '/algorithm/': getAlgorithmSidebar(),
+      '/collectArticle/': getArticleSidebar()
+    },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
     repo: 'https://github.com/tian-cai/my-blog',
@@ -54,4 +44,51 @@ module.exports = {
     }
   },
   plugins: ['@vuepress/back-to-top', 'one-click-copy']
+}
+
+function getConstractorSidebar() {
+  return [
+    {
+      title: '数据结构',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/constractor/stack', '栈'],
+        ['/constractor/queue', '队列'],
+        ['/constractor/deque', '双端队列'],
+        ['/constractor/tree', '树'],
+        ['/constractor/minheap', '最小堆'],
+        ['/constractor/maxheap', '最大堆']
+      ]
+    }
+  ]
+}
+
+function getAlgorithmSidebar() {
+  return [
+    {
+      title: '算法',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/algorithm/bubblesort', '冒泡排序'],
+        ['/algorithm/selectionSort', '选择排序'],
+        ['/algorithm/insertSort', '插入排序'],
+        ['/algorithm/mergeSort', '归并排序']
+      ]
+    }
+  ]
+}
+
+function getArticleSidebar() {
+  return [
+    {
+      title: '好文收藏',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ''
+      ]
+    }
+  ]
 }
