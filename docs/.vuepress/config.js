@@ -56,6 +56,7 @@ function getConstractorSidebar() {
         ['/constractor/stack', '栈'],
         ['/constractor/queue', '队列'],
         ['/constractor/deque', '双端队列'],
+        ['/constractor/dictionary', '字典'],
         ['/constractor/tree', '树'],
         ['/constractor/minheap', '最小堆'],
         ['/constractor/maxheap', '最大堆']

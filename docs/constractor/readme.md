@@ -5,6 +5,7 @@
 - [栈](stack)
 - [队列](queue)
 - [双端队列](deque)
+- [字典](dictionary)
 - [树](tree)
 - [最小堆](minheap)
 - [最大堆](maxheap)
