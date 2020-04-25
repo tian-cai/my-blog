@@ -14,6 +14,12 @@ module.exports = {
               { text: '数据结构', link: '/constractor/' },
               { text: '算法', link: '/algorithm/' }
             ]
+          },
+          {
+            text: '工程化',
+            items: [
+              { text: 'Babel', link: '/babel/' }
+            ]
           }
         ]
       },
@@ -22,7 +28,8 @@ module.exports = {
     sidebar: {
       '/constractor/': getConstractorSidebar(),
       '/algorithm/': getAlgorithmSidebar(),
-      '/collectArticle/': getArticleSidebar()
+      '/collectArticle/': getArticleSidebar(),
+      '/babel/': getProjectSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -44,6 +51,19 @@ module.exports = {
     }
   },
   plugins: ['@vuepress/back-to-top', 'one-click-copy']
+}
+
+function  getProjectSidebar() {
+  return [
+    {
+      title: 'Babel',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/babel/summary','概述']
+      ]
+    }
+  ]
 }
 
 function getConstractorSidebar() {
