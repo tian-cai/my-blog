@@ -18,6 +18,7 @@ module.exports = {
           {
             text: '工程化',
             items: [
+              { text: 'webpack', link: '/webpack/' },
               { text: 'Babel', link: '/babel/' }
             ]
           }
@@ -29,7 +30,8 @@ module.exports = {
       '/constractor/': getConstractorSidebar(),
       '/algorithm/': getAlgorithmSidebar(),
       '/collectArticle/': getArticleSidebar(),
-      '/babel/': getProjectSidebar()
+      '/babel/': getProjectSidebar(),
+      '/webpack/': getWebpackSidebar(),
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -51,6 +53,25 @@ module.exports = {
     }
   },
   plugins: ['@vuepress/back-to-top', 'one-click-copy']
+}
+
+function getWebpackSidebar() {
+  return [
+    {
+      title: 'webpack',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/webpack/summary','概述'],
+        ['/webpack/plugin','常用插件'],
+        ['/webpack/loader','常用loader'],
+        ['/webpack/config','一般配置'],
+        ['/webpack/pack','打包优化'],
+        ['/webpack/makePlugin','开发插件'],
+        ['/webpack/makeLoader','开发loader']
+      ]
+    }
+  ]
 }
 
 function  getProjectSidebar() {
