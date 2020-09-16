@@ -49,3 +49,7 @@
 - [阿里巴巴旗下的icon平台](https://www.iconfont.cn/)
 - [markdown文章美化](https://mdnice.com/)
 
+## CDN
+- [漫话：如何给女朋友解释什么是CDN？](https://juejin.im/post/6844903906296725518)
+- [五分钟了解CDN](https://juejin.im/post/6844903605888090125)
+
