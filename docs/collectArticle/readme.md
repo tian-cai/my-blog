@@ -53,3 +53,11 @@
 - [漫话：如何给女朋友解释什么是CDN？](https://juejin.im/post/6844903906296725518)
 - [五分钟了解CDN](https://juejin.im/post/6844903605888090125)
 
+## 好用的vscode插件
+- `Git History`: 迅速查看 Git 历史记录，图形化的页面，使 Git 历史一目了然
+- `Git Graph`: 可以帮助你更好的分析分支之间的关系
+- `Git Emoji`: 提交信息加入表情
+- `Bracket Pair Colorizer`: 快速区分括号位置和类型
+- `Path Intellisense`: 路径自动补全
+- `filesize`: 在底部状态栏显示当前文件大小，点击后还可以看到详细创建、修改时间
+- `vscode-icons`: 为文件管理器增加文件类型图标
