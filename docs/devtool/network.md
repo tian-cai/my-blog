@@ -23,3 +23,6 @@
 5. 重新reload页面，会发现我们刚才输入的文件会请求失败
 
     ![logoerror](./img/logoerror.png)
+
+### 参考文章
+- [Block requests](https://developers.google.com/web/tools/chrome-devtools/network?hl=zh-cn)
