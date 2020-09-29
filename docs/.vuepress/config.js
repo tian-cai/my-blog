@@ -21,6 +21,12 @@ module.exports = {
               { text: 'webpack', link: '/webpack/' },
               { text: 'Babel', link: '/babel/' }
             ]
+          },
+          {
+            text: '调试工具',
+            items: [
+              { text: 'chrome devtool', link: '/devtool/' }
+            ]
           }
         ]
       },
@@ -32,6 +38,7 @@ module.exports = {
       '/collectArticle/': getArticleSidebar(),
       '/babel/': getProjectSidebar(),
       '/webpack/': getWebpackSidebar(),
+      '/devtool/': getDevtoolSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -130,6 +137,19 @@ function getArticleSidebar() {
       sidebarDepth: 2,
       children: [
         ''
+      ]
+    }
+  ]
+}
+
+function getDevtoolSidebar() {
+  return [
+    {
+      title: 'devtool',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/devtool/network', 'network']
       ]
     }
   ]
