@@ -16,6 +16,8 @@
 
 ### 更多内容
 - [network](network)
+- [css](css)
+- [memory](memory)
 
 ### 参考文章
 - [chrome-devtools](https://developers.google.com/web/tools/chrome-devtools?hl=zh-cn)

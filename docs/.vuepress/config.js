@@ -149,7 +149,9 @@ function getDevtoolSidebar() {
       collapsable: false,
       sidebarDepth: 2,
       children: [
-        ['/devtool/network', 'network']
+        ['/devtool/network', 'network'],
+        ['/devtool/css', 'css'],
+        ['/devtool/memory', 'memory']
       ]
     }
   ]
