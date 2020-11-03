@@ -27,6 +27,18 @@ module.exports = {
             items: [
               { text: 'chrome devtool', link: '/devtool/' }
             ]
+          },
+          {
+            text: '基础与框架',
+            items: [
+              { text: '基础', link: '/basic/' }
+            ]
+          },
+          {
+            text: 'Node',
+            items: [
+              { text: 'Node', link: '/node/' }
+            ]
           }
         ]
       },
@@ -38,7 +50,8 @@ module.exports = {
       '/collectArticle/': getArticleSidebar(),
       '/babel/': getProjectSidebar(),
       '/webpack/': getWebpackSidebar(),
-      '/devtool/': getDevtoolSidebar()
+      '/devtool/': getDevtoolSidebar(),
+      '/basic/': getBasicSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -152,6 +165,29 @@ function getDevtoolSidebar() {
         ['/devtool/network', 'network'],
         ['/devtool/css', 'css'],
         ['/devtool/memory', 'memory']
+      ]
+    }
+  ]
+}
+
+function getBasicSidebar() {
+  return [
+    {
+      title: 'basic',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/basic/mycall', '实现call和apply'],
+        ['/basic/mybind', '实现bind'],
+        ['/basic/mynew', '实现new'],
+        ['/basic/myinstanceOf', '实现instanceOf'],
+        ['/basic/deepclone', '实现深克隆'],
+        ['/basic/eventbus', '实现event-bus'],
+        ['/basic/debounce', '实现debounce'],
+        ['/basic/throttle', '实现throttle'],
+        ['/basic/eventloop', '浏览器-eventloop'],
+        ['/basic/eventloopNode', 'Node-eventloop'],
+        ['/basic/proxy', 'Proxy vs defineproperty']
       ]
     }
   ]
