@@ -180,7 +180,7 @@ function getBasicSidebar() {
         ['/basic/mycall', '实现call和apply'],
         ['/basic/mybind', '实现bind'],
         ['/basic/mynew', '实现new'],
-        ['/basic/myinstanceOf', '实现instanceOf'],
+        ['/basic/myinstanceof', '实现instanceof'],
         ['/basic/deepclone', '实现深克隆'],
         ['/basic/eventbus', '实现event-bus'],
         ['/basic/debounce', '实现debounce'],

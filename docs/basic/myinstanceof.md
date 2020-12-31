@@ -14,7 +14,7 @@
 
 ### 模拟实现
 ```js
-function myInstanceOf(left, right) {
+function myInstanceof(left, right) {
     let leftValue = left.__proto__
     let rightValue = right.prototype
     while (true) {
