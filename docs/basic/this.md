@@ -52,7 +52,7 @@
         person.say.apply(son)   // I am window
         person.say.bind(son)()  // I am window
         ```
-        **对象不构成封闭词法环境，导致say箭头函数定义时的作用域就是全局作用域，所以this指向了window**
+        **对象不构成封闭词法环境，导致say箭头函数定义时的作用域就是全局作用域，所以`this`指向了`window`**
     - 特点
         - 不可以使用`arguments`对象
         - 不可以当作构造函数，不能用作`Generator`函数

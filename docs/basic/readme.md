@@ -12,3 +12,5 @@
 - [浏览器-eventloop](eventloop)
 - [Proxy vs defineproperty](proxy)
 - [Node-eventloop](eventloopNode)
+- [this 指向](this)
+- [js 原型](prototype)

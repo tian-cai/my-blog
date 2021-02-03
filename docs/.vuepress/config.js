@@ -188,7 +188,7 @@ function getBasicSidebar() {
         ['/basic/eventloop', '浏览器-eventloop'],
         ['/basic/eventloopNode', 'Node-eventloop'],
         ['/basic/proxy', 'Proxy vs defineproperty'],
-        ['/basic/prototype', 'js 原型']
+        ['/basic/prototype', 'js 原型'],
         ['/basic/this', 'this 指向']
       ]
     }
