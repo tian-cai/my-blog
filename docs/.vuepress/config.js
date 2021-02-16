@@ -164,7 +164,9 @@ function getInterviewSidebar() {
       collapsable: false,
       sidebarDepth: 2,
       children: [
-        ['bfc', 'BFC']
+        ['bfc', 'BFC'],
+        ['flow', '布局'],
+        ['set-map', 'set和map']
       ]
     }
   ]
