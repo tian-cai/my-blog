@@ -42,7 +42,8 @@ module.exports = {
           }
         ]
       },
-      { text: '好文收藏', link: '/collectArticle/' }
+      { text: '好文收藏', link: '/collectArticle/' },
+      { text: '面经', link: '/interview/' }
     ],
     sidebar: {
       '/constractor/': getConstractorSidebar(),
@@ -51,7 +52,8 @@ module.exports = {
       '/babel/': getProjectSidebar(),
       '/webpack/': getWebpackSidebar(),
       '/devtool/': getDevtoolSidebar(),
-      '/basic/': getBasicSidebar()
+      '/basic/': getBasicSidebar(),
+      '/interview/': getInterviewSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -155,6 +157,19 @@ function getArticleSidebar() {
   ]
 }
 
+function getInterviewSidebar() {
+  return [
+    {
+      title: '面经',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['bfc', 'BFC']
+      ]
+    }
+  ]
+}
+
 function getDevtoolSidebar() {
   return [
     {
@@ -189,7 +204,8 @@ function getBasicSidebar() {
         ['/basic/eventloopNode', 'Node-eventloop'],
         ['/basic/proxy', 'Proxy vs defineproperty'],
         ['/basic/prototype', 'js 原型'],
-        ['/basic/this', 'this 指向']
+        ['/basic/this', 'this 指向'],
+        ['/basic/extends', 'js 继承']
       ]
     }
   ]
