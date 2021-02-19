@@ -207,7 +207,8 @@ function getBasicSidebar() {
         ['/basic/proxy', 'Proxy vs defineproperty'],
         ['/basic/prototype', 'js 原型'],
         ['/basic/this', 'this 指向'],
-        ['/basic/extends', 'js 继承']
+        ['/basic/extends', 'js 继承'],
+        ['/basic/promise', ' Promise']
       ]
     }
   ]
