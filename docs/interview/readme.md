@@ -1,6 +1,8 @@
 > 面试题目
 
 ## css
+#### 盒子模型
+[盒子模型](boxModel)
 #### BFC
 [BFC详解](bfc)
 #### 水平垂直居中
@@ -34,10 +36,12 @@
 #### call, apply, bind
 #### 如何实现bind
 #### this的指向
-- [this 指向](/basic/this)
+- [this 指向](./../basic/this)
 #### js的原型
 #### js的继承
 #### js的事件流
+#### 闭包
+- [破解前端面试（80% 应聘者不及格系列）：从闭包说起](https://juejin.cn/post/6844903474212143117)
 #### promise
 #### es6模块化和commonjs的区别
 #### 实现一个异步队列
@@ -48,13 +52,14 @@
 - WeakMap结构与Map结构类似，只是键都是对象（弱引用），不可遍历
 - [Set和Map](set-map)
 #### proxy
-- [proxy](/basic/proxy)
+- [proxy](./../basic/proxy)
 #### es6新特性
 - let/const，set/map，解构赋值
 - 箭头函数
 - class
 - for of
 - 新增api
+- 模版字符串
 #### 对象的遍历
 #### iterator
 #### 防抖
@@ -241,7 +246,7 @@ function throttle(func, wait) {
 ## 算法
 #### 二分查找
 #### [链表反转](https://leetcode-cn.com/problems/reverse-linked-list/)
-#### 最长回文字串
+#### 最长回文字串(https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 ## 准备
 - [2021年前端面试必读文章](https://juejin.cn/post/6844904116339261447)

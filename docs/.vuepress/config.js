@@ -164,6 +164,7 @@ function getInterviewSidebar() {
       collapsable: false,
       sidebarDepth: 2,
       children: [
+        ['boxModel', '盒模型'],
         ['bfc', 'BFC'],
         ['flow', '布局'],
         ['set-map', 'set和map']
@@ -208,6 +209,7 @@ function getBasicSidebar() {
         ['/basic/prototype', 'js 原型'],
         ['/basic/this', 'this 指向'],
         ['/basic/extends', 'js 继承'],
+        ['/basic/closure', ' 闭包'],
         ['/basic/promise', ' Promise']
       ]
     }
