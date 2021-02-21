@@ -134,7 +134,10 @@ function throttle(func, wait) {
 #### vue3新特性
 
 ## 浏览器
+
 #### 跨域
+#### 浏览器渲染原理
+- [深入浅出浏览器渲染原理](https://zhuanlan.zhihu.com/p/53913989)
 
 
 ## 网络
