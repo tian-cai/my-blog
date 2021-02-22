@@ -141,7 +141,12 @@ function throttle(func, wait) {
 
 
 ## 网络
-#### http为啥是无状态的
+#### TCP与UDP
+- TCP是面向连接的、可靠的、基于字节流的、一对一的传输层通信协议
+- UDP是面向无连接的，不可靠的，面向报文，支持多对多，一对多的传输层通信协议
+- [TCP协议详解](https://juejin.cn/post/6844903685563105293)
+- [TCP和UDP比较](https://segmentfault.com/a/1190000018582150)
+- [TCP和UDP的区别](https://zhuanlan.zhihu.com/p/24860273)
 #### http常用状态码
 - 1xx 表示请求已被接受并需要处理
 - 2xx 成功（这系列表明请求被正常处理了）
