@@ -27,14 +27,30 @@
 
 [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
+#### 移动设备的1px
+
 
 ## js
 #### setTimeout和setInterval
 - setTimeout() 方法用于在指定的毫秒数后将函数放入队列。
 - setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
 #### == 和 === 的区别
-#### call, apply, bind
+
+#### NaN
+- NaN 不等于任何值，包括自己
+- 只能用isNaN()来判断一个值是不是NaN
+
+#### Number.toString()
+
+#### 数组扁平化
+- [数组扁平化](./array)
+#### 数组去重
+- [数组去重](./array)
+
+#### call, apply
+- [](./../basic/mycall)
 #### 如何实现bind
+- [](./../basic/mybind)
 #### this的指向
 - [this 指向](./../basic/this)
 #### js的原型
@@ -133,9 +149,15 @@ function throttle(func, wait) {
 #### vuex原理
 #### vue3新特性
 
+## React
+
 ## 浏览器
 
 #### 跨域
+- CORS
+- document.domain + iframe
+- JSONP
+- [九种跨域方式实现原理（完整版）](https://juejin.cn/post/6844903767226351623)
 #### 浏览器渲染原理
 - [深入浅出浏览器渲染原理](https://zhuanlan.zhihu.com/p/53913989)
 
@@ -148,11 +170,13 @@ function throttle(func, wait) {
 - [TCP和UDP比较](https://segmentfault.com/a/1190000018582150)
 - [TCP和UDP的区别](https://zhuanlan.zhihu.com/p/24860273)
 #### http常用状态码
-- 1xx 表示请求已被接受并需要处理
+- 1xx 表示请求已被接受，继续处理
 - 2xx 成功（这系列表明请求被正常处理了）
 - 3xx 重定向（表明浏览器要执行特殊处理）
 - 4xx 客户端错误
 - 5xx 服务器错误
+- 100 初始的请求已经接受，请客户端继续发送剩余部分
+- 101 切换协议
 - 200 OK，表示从客户端发来的请求在服务器端被正确处理
 - 204 No content，表示请求成功，但响应报文不含实体的主体部分
 - 301 永久性重定向
@@ -254,7 +278,7 @@ function throttle(func, wait) {
 ## 算法
 #### 二分查找
 #### [链表反转](https://leetcode-cn.com/problems/reverse-linked-list/)
-#### 最长回文字串(https://leetcode-cn.com/problems/longest-palindromic-substring/)
+#### [最长回文字串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
 
 ## 准备
 - [2021年前端面试必读文章](https://juejin.cn/post/6844904116339261447)
