@@ -161,6 +161,10 @@ function throttle(func, wait) {
 #### 浏览器渲染原理
 - [深入浅出浏览器渲染原理](https://zhuanlan.zhihu.com/p/53913989)
 
+#### 垃圾回收
+
+#### 内存泄漏
+
 
 ## 网络
 #### TCP与UDP

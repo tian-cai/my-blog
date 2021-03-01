@@ -100,21 +100,24 @@
 ### 数组扁平化
 - 遍历递归
     ```js
-    function flatten(array) {
-        const len = array.length
+    function flatten(array, dep = 1) {
         let result = []
-        for (let i = 0; i < len; i++) {
-            if(Array.isArray(array[i])) {
-                result = result.concat(flatten(array[i]))
+        for(let i = 0; i < array.length; i++) {
+            if(dep > 0) {
+                if(Array.isArray(array[i])){
+                    result = result.concat(flatten(array[i], dep - 1))
+                }else {
+                    result.push(array[i])
+                } 
             }else {
                 result.push(array[i])
-            } 
+            }
         }
         return result
     }
     const arr = [1, [2,[3,4]],5,6]
     const result = flatten(arr)
-    console.log(result) // [ 1, 2, 3, 4, 5, 6 ]
+    console.log(result) // [ 1, 2, [3, 4], 5, 6 ]
     ```
 - 数组的flat方法
     ```js
@@ -128,15 +131,16 @@
     flat方法接受一个参数表示想要拉平的层数，默认为1
 - 扩展运算符
     ```js
-    function flatten(array) {
-        while (array.some(item => Array.isArray(item))) {
+    function flatten(array, dep = 1) {
+        while (array.some(item => Array.isArray(item)) && dep > 0) {
+            dep--
             array = [].concat(...array);
         }
         return array
     }
     const arr = [1, [2,[3,4]],5,6]
     const result = flatten(arr)
-    console.log(result) // [ 1, 2, 3, 4, 5, 6 ]
+    console.log(result) // [ 1, 2, [ 3, 4 ], 5, 6 ]
     ```
 
 ### reduce

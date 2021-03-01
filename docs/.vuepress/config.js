@@ -167,7 +167,8 @@ function getInterviewSidebar() {
         ['boxModel', '盒模型'],
         ['bfc', 'BFC'],
         ['flow', '布局'],
-        ['set-map', 'set和map']
+        ['set-map', 'set和map'],
+        ['array', '数组的用法']
       ]
     }
   ]
