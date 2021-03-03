@@ -43,22 +43,24 @@
 #### Number.toString()
 
 #### 数组扁平化
-- [数组扁平化](./array)
+- [数组扁平化](./../basic/array)
 #### 数组去重
-- [数组去重](./array)
+- [数组去重](./../basic/array)
 
-#### call, apply
-- [](./../basic/mycall)
+#### 如何实现call, apply
+- [模拟实现call/apply](./../basic/mycall)
 #### 如何实现bind
-- [](./../basic/mybind)
+- [模拟实现bind](./../basic/mybind)
 #### this的指向
 - [this 指向](./../basic/this)
 #### js的原型
+- [js的原型](./../basic/prototype)
 #### js的继承
 #### js的事件流
 #### 闭包
 - [破解前端面试（80% 应聘者不及格系列）：从闭包说起](https://juejin.cn/post/6844903474212143117)
 #### promise
+- [promise](./../basic/promise)
 #### es6模块化和commonjs的区别
 #### 实现一个异步队列
 #### Set和Map
@@ -66,7 +68,7 @@
 - Map表示键值对的集合，各种类型的值（包括对象）都可以当作键
 - WeakSet与Set类似，只是成员都是对象（弱引用），并且不可遍历
 - WeakMap结构与Map结构类似，只是键都是对象（弱引用），不可遍历
-- [Set和Map](set-map)
+- [Set和Map](./../basic/set-map)
 #### proxy
 - [proxy](./../basic/proxy)
 #### es6新特性

@@ -166,9 +166,7 @@ function getInterviewSidebar() {
       children: [
         ['boxModel', '盒模型'],
         ['bfc', 'BFC'],
-        ['flow', '布局'],
-        ['set-map', 'set和map'],
-        ['array', '数组的用法']
+        ['flow', '布局']
       ]
     }
   ]
@@ -192,14 +190,19 @@ function getDevtoolSidebar() {
 function getBasicSidebar() {
   return [
     {
-      title: 'basic',
+      title: 'js基础',
       collapsable: false,
       sidebarDepth: 2,
       children: [
+        ['/basic/string', '字符串的常见操作'],
+        ['/basic/array', '数组的常见操作'],
         ['/basic/mycall', '实现call和apply'],
         ['/basic/mybind', '实现bind'],
         ['/basic/mynew', '实现new'],
         ['/basic/myinstanceof', '实现instanceof'],
+        ['/basic/prototype', 'js 原型'],
+        ['/basic/this', 'this 指向'],
+        ['/basic/extends', 'js 继承'],
         ['/basic/deepclone', '实现深克隆'],
         ['/basic/eventbus', '实现event-bus'],
         ['/basic/debounce', '实现debounce'],
@@ -207,11 +210,9 @@ function getBasicSidebar() {
         ['/basic/eventloop', '浏览器-eventloop'],
         ['/basic/eventloopNode', 'Node-eventloop'],
         ['/basic/proxy', 'Proxy vs defineproperty'],
-        ['/basic/prototype', 'js 原型'],
-        ['/basic/this', 'this 指向'],
-        ['/basic/extends', 'js 继承'],
         ['/basic/closure', ' 闭包'],
-        ['/basic/promise', ' Promise']
+        ['/basic/promise', ' Promise'],
+        ['/basic/set-map', 'set和map']
       ]
     }
   ]
