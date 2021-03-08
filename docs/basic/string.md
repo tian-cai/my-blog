@@ -1,5 +1,5 @@
-
-### 模拟实现trim()
+### 字符串的常见操作
+### 模拟实现`trim()`
 ```js
 String.prototype.trim = function() {
     let reg = /^(\s)*|(\s)*$/g

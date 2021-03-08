@@ -34,11 +34,6 @@
 #### setTimeout和setInterval
 - setTimeout() 方法用于在指定的毫秒数后将函数放入队列。
 - setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
-#### == 和 === 的区别
-
-#### NaN
-- NaN 不等于任何值，包括自己
-- 只能用isNaN()来判断一个值是不是NaN
 
 #### Number.toString()
 

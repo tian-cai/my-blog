@@ -196,6 +196,9 @@ function getBasicSidebar() {
       children: [
         ['/basic/string', '字符串的常见操作'],
         ['/basic/array', '数组的常见操作'],
+        ['/basic/number', '数字的常见操作'],
+        ['/basic/object', '对象的常见操作'],
+        ['/basic/type', '判断数据类型'],
         ['/basic/mycall', '实现call和apply'],
         ['/basic/mybind', '实现bind'],
         ['/basic/mynew', '实现new'],
@@ -203,16 +206,16 @@ function getBasicSidebar() {
         ['/basic/prototype', 'js 原型'],
         ['/basic/this', 'this 指向'],
         ['/basic/extends', 'js 继承'],
+        ['/basic/promise', ' Promise'],
+        ['/basic/set-map', 'set和map'],
+        ['/basic/proxy', 'Proxy vs defineproperty'],
         ['/basic/deepclone', '实现深克隆'],
         ['/basic/eventbus', '实现event-bus'],
         ['/basic/debounce', '实现debounce'],
         ['/basic/throttle', '实现throttle'],
         ['/basic/eventloop', '浏览器-eventloop'],
         ['/basic/eventloopNode', 'Node-eventloop'],
-        ['/basic/proxy', 'Proxy vs defineproperty'],
-        ['/basic/closure', ' 闭包'],
-        ['/basic/promise', ' Promise'],
-        ['/basic/set-map', 'set和map']
+        ['/basic/closure', ' 闭包']
       ]
     }
   ]
