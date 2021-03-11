@@ -31,7 +31,8 @@ module.exports = {
           {
             text: '基础与框架',
             items: [
-              { text: '基础', link: '/basic/' }
+              { text: '基础', link: '/basic/' },
+              { text: '浏览器', link: '/brower/' }
             ]
           },
           {
@@ -53,7 +54,8 @@ module.exports = {
       '/webpack/': getWebpackSidebar(),
       '/devtool/': getDevtoolSidebar(),
       '/basic/': getBasicSidebar(),
-      '/interview/': getInterviewSidebar()
+      '/interview/': getInterviewSidebar(),
+      '/brower/': getBrowerSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -209,13 +211,26 @@ function getBasicSidebar() {
         ['/basic/promise', ' Promise'],
         ['/basic/set-map', 'set和map'],
         ['/basic/proxy', 'Proxy vs defineproperty'],
+        ['/basic/closure', ' 闭包'],
         ['/basic/deepclone', '实现深克隆'],
-        ['/basic/eventbus', '实现event-bus'],
         ['/basic/debounce', '实现debounce'],
         ['/basic/throttle', '实现throttle'],
-        ['/basic/eventloop', '浏览器-eventloop'],
-        ['/basic/eventloopNode', 'Node-eventloop'],
-        ['/basic/closure', ' 闭包']
+        ['/basic/eventloopNode', 'Node-eventloop']
+      ]
+    }
+  ]
+}
+
+function getBrowerSidebar() {
+  return [
+    {
+      title: '浏览器',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/brower/load', '浏览器加载'],
+        ['/brower/eventstream', '浏览器-事件流'],
+        ['/brower/eventloop', '浏览器-eventloop']
       ]
     }
   ]
