@@ -109,6 +109,23 @@
     const result = flatten(arr)
     console.log(result) // [ 1, 2, [ 3, 4 ], 5, 6 ]
     ```
+- 利用`reduce`
+    ```js
+    function flatten(array, dep = 1) {
+        let result = []
+        if (dep > 0) {
+            result = array.reduce((total, value)=> {
+                return total.concat(Array.isArray(value) ? flatten(value, dep - 1) : value)
+            }, [])
+        } else {
+            result = array.slice()
+        }
+        return result
+    }
+    const arr = [1, [2,[3,4]],5,6]
+    const result = flatten(arr)
+    console.log(result) // [ 1, 2, [ 3, 4 ], 5, 6 ]
+    ```
 
 ### reduce
 - demo

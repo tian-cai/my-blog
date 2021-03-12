@@ -9,7 +9,7 @@
 `Promise`对象是一个构造函数，用来生成`Promise`实例。
 构造函数接受一个函数作为参数，该函数的两个参数分别是`resolve`和`reject`，它们是两个函数。<br>
 `resolve`函数的作用是将`Promise`对象的状态从`pending`变为`resolved`，并将异步操作的结果，作为参数传递出去。<br>
-`reject`函数的作用是将``Promise`对象的状态从`pending`变为`rejected`，并将异步操作报出的错误，作为参数传递出去。
+`reject`函数的作用是将`Promise`对象的状态从`pending`变为`rejected`，并将异步操作报出的错误，作为参数传递出去。
 ```js
 let promise = new Promise(function(resolve, reject) {
     console.log("Promise start")
@@ -30,6 +30,11 @@ console.log("Hi!")
 // Promise end
 // Hi!
 // 42
+
+Promise.resolve(1).then(2).then(3).then(function(value) {
+    console.log(value)
+})
+// 1
 ```
 ### 实例方法
 - `then()`<br>

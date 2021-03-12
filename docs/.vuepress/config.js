@@ -214,8 +214,7 @@ function getBasicSidebar() {
         ['/basic/closure', ' 闭包'],
         ['/basic/deepclone', '实现深克隆'],
         ['/basic/debounce', '实现debounce'],
-        ['/basic/throttle', '实现throttle'],
-        ['/basic/eventloopNode', 'Node-eventloop']
+        ['/basic/throttle', '实现throttle']
       ]
     }
   ]
