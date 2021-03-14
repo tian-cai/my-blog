@@ -201,6 +201,7 @@ function getBasicSidebar() {
         ['/basic/number', '数字的常见操作'],
         ['/basic/object', '对象的常见操作'],
         ['/basic/type', '判断数据类型'],
+        ['/basic/converttype', '类型转换'],
         ['/basic/mycall', '实现call和apply'],
         ['/basic/mybind', '实现bind'],
         ['/basic/mynew', '实现new'],
@@ -229,7 +230,8 @@ function getBrowerSidebar() {
       children: [
         ['/brower/load', '浏览器加载'],
         ['/brower/eventstream', '浏览器-事件流'],
-        ['/brower/eventloop', '浏览器-eventloop']
+        ['/brower/eventloop', '浏览器-eventloop'],
+        ['/brower/collectgarbage', 'v8垃圾回收']
       ]
     }
   ]

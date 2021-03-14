@@ -1,4 +1,4 @@
-> 前端基础
+> js基础
 
 本栏的主要内容如下：
 - [字符串的常见操作](string)
@@ -6,6 +6,7 @@
 - [数字的一些操作](number)
 - [对象的常见操作](object)
 - [判断数据类型](type)
+- [类型转换](converttype)
 - [实现call和apply](mycall)
 - [实现bind](mybind)
 - [实现new](mynew)
@@ -20,5 +21,3 @@
 - [实现深克隆](deepclone)
 - [实现debounce](debounce)
 - [实现throttle](throttle)
-- [浏览器-eventloop](eventloop)
-- [Node-eventloop](eventloopNode)
