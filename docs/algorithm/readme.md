@@ -5,3 +5,5 @@
 - [选择排序](selectionSort)
 - [插入排序](insertSort)
 - [归并排序](mergeSort)
+- [快速排序](quickSort)
+- [二分查找法](binarySearch)
