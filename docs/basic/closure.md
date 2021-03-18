@@ -7,32 +7,6 @@
 - 所有的函数在“诞生”时都会记住创建它们的词法环境，都有名为 `[[Environment]]` 的隐藏属性，该属性保存了对创建该函数的词法环境的引用
 - 当函数调用时，会为该调用创建一个新的词法环境，并且其外部词法环境引用获取于 `[[Environment]]`属性
 
-### 一个小例子
-```js
-let count = 10
-function a() {
-    return count + 10
-}
-
-function b() {
-    const count = 20
-    return a()
-}
-console.log(b())    // 20
-```
-
-```js
-let count = 10
-function b() {
-    const count = 20
-    function a() {
-        return count + 10
-    }
-    return a()
-}
-console.log(b()) // 30
-```
-
 ### 闭包
 - 定义<br>
 是指内部函数总是可以访问其所在的外部函数中声明的变量和参数，即使在其外部函数被调用返回了之后

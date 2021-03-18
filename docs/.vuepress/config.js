@@ -142,7 +142,8 @@ function getAlgorithmSidebar() {
         ['/algorithm/insertSort', '插入排序'],
         ['/algorithm/mergeSort', '归并排序'],
         ['/algorithm/quickSort', '快速排序'],
-        ['/algorithm/binarySearch', '二分法']
+        ['/algorithm/binarySearch', '二分法'],
+        ['/algorithm/dp', '动态规划']
       ]
     }
   ]
@@ -198,12 +199,14 @@ function getBasicSidebar() {
       collapsable: false,
       sidebarDepth: 2,
       children: [
+        ['/basic/variable', '变量的定义'],
         ['/basic/string', '字符串的常见操作'],
         ['/basic/array', '数组的常见操作'],
         ['/basic/number', '数字的常见操作'],
         ['/basic/object', '对象的常见操作'],
         ['/basic/type', '判断数据类型'],
         ['/basic/converttype', '类型转换'],
+        ['/basic/function', '函数的那些知识'],
         ['/basic/mycall', '实现call和apply'],
         ['/basic/mybind', '实现bind'],
         ['/basic/mynew', '实现new'],
