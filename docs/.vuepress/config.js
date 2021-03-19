@@ -214,6 +214,7 @@ function getBasicSidebar() {
         ['/basic/prototype', 'js 原型'],
         ['/basic/this', 'this 指向'],
         ['/basic/extends', 'js 继承'],
+        ['/basic/class', 'class的内部实现'],
         ['/basic/promise', ' Promise'],
         ['/basic/set-map', 'set和map'],
         ['/basic/proxy', 'Proxy vs defineproperty'],

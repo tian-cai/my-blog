@@ -16,6 +16,7 @@
 - [js 原型](prototype)
 - [this 指向](this)
 - [js 继承](extends)
+- [class的内部实现](class)
 - [Promise](promise)
 - [set和map](set-map)
 - [Proxy vs defineproperty](proxy)
