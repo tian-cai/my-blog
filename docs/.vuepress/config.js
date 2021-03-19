@@ -218,9 +218,7 @@ function getBasicSidebar() {
         ['/basic/set-map', 'set和map'],
         ['/basic/proxy', 'Proxy vs defineproperty'],
         ['/basic/closure', ' 闭包'],
-        ['/basic/deepclone', '实现深克隆'],
-        ['/basic/debounce', '实现debounce'],
-        ['/basic/throttle', '实现throttle']
+        ['/basic/deepclone', '实现深克隆']
       ]
     }
   ]
@@ -235,6 +233,8 @@ function getBrowerSidebar() {
       children: [
         ['/brower/load', '浏览器加载'],
         ['/brower/eventstream', '浏览器-事件流'],
+        ['/brower/debounce', '实现debounce'],
+        ['/brower/throttle', '实现throttle'],
         ['/brower/eventloop', '浏览器-eventloop'],
         ['/brower/collectgarbage', 'v8垃圾回收']
       ]

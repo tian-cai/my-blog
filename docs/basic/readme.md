@@ -21,5 +21,3 @@
 - [Proxy vs defineproperty](proxy)
 - [闭包](closure)
 - [实现深克隆](deepclone)
-- [实现debounce](debounce)
-- [实现throttle](throttle)
