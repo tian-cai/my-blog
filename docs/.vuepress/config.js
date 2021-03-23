@@ -232,12 +232,12 @@ function getBrowerSidebar() {
       collapsable: false,
       sidebarDepth: 2,
       children: [
-        ['/brower/load', '浏览器加载'],
+        ['/brower/render', '浏览器渲染原理'],
         ['/brower/eventstream', '浏览器-事件流'],
         ['/brower/debounce', '实现debounce'],
         ['/brower/throttle', '实现throttle'],
         ['/brower/eventloop', '浏览器-eventloop'],
-        ['/brower/collectgarbage', 'v8垃圾回收']
+        ['/brower/collectgarbage', 'V8引擎垃圾回收']
       ]
     }
   ]

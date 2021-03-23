@@ -51,9 +51,9 @@
 - [最大堆](https://tian-cai.github.io/my-blog/constractor/maxheap.html)
 
 ### 浏览器方面
-- [浏览器加载](https://tian-cai.github.io/my-blog/brower/load.html)
+- [浏览器渲染原理](https://tian-cai.github.io/my-blog/brower/render.html)
 - [浏览器-事件流](https://tian-cai.github.io/my-blog/brower/eventstream.html)
 - [实现debounce](https://tian-cai.github.io/my-blog/brower/debounce.html)
 - [实现throttle](https://tian-cai.github.io/my-blog/brower/throttle.html)
 - [浏览器-eventloop](https://tian-cai.github.io/my-blog/brower/eventloop.html)
-- [v8垃圾回收](https://tian-cai.github.io/my-blog/brower/collectgarbage.html)
+- [V8引擎垃圾回收](https://tian-cai.github.io/my-blog/brower/collectgarbage.html)
