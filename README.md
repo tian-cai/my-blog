@@ -40,6 +40,7 @@
 - [归并排序](https://tian-cai.github.io/my-blog/algorithm/mergeSort.html)
 - [快速排序](https://tian-cai.github.io/my-blog/algorithm/quickSort.html)
 - [二分查找法](https://tian-cai.github.io/my-blog/algorithm/binarySearch.html)
+- [动态规划](https://tian-cai.github.io/my-blog/algorithm/dp.html)
 
 ### 数据结构方面
 - [栈](https://tian-cai.github.io/my-blog/constractor/stack.html)
