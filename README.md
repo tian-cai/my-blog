@@ -46,6 +46,7 @@
 - [栈](https://tian-cai.github.io/my-blog/constractor/stack.html)
 - [队列](https://tian-cai.github.io/my-blog/constractor/queue.html)
 - [双端队列](https://tian-cai.github.io/my-blog/constractor/deque.html)
+- [链表](https://tian-cai.github.io/my-blog/constractor/linkedList.html)
 - [字典](https://tian-cai.github.io/my-blog/constractor/dictionary.html)
 - [树](https://tian-cai.github.io/my-blog/constractor/tree.html)
 - [最小堆](https://tian-cai.github.io/my-blog/constractor/minheap.html)
