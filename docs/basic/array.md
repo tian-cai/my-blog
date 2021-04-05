@@ -127,6 +127,18 @@
     console.log(result) // [ 1, 2, [ 3, 4 ], 5, 6 ]
     ```
 
+### 数组的随机排列
+数组的随机排列就像洗扑克牌一样
+```js
+function shuffle(array) {
+    const len = array.length
+    for (let i = len - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1)) 
+        swap(array, i, randomIndex)
+    }
+}
+```
+
 ### reduce
 - demo
     ```js
