@@ -55,7 +55,8 @@ module.exports = {
       '/devtool/': getDevtoolSidebar(),
       '/basic/': getBasicSidebar(),
       '/interview/': getInterviewSidebar(),
-      '/brower/': getBrowerSidebar()
+      '/brower/': getBrowerSidebar(),
+      '/node/': getNodeSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -239,6 +240,19 @@ function getBrowerSidebar() {
         ['/brower/throttle', '实现throttle'],
         ['/brower/eventloop', '浏览器-eventloop'],
         ['/brower/collectgarbage', 'V8引擎垃圾回收']
+      ]
+    }
+  ]
+}
+
+function getNodeSidebar() {
+  return [
+    {
+      title: 'Node',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/node/npm', '那些我们必须掌握的npm知识']
       ]
     }
   ]
