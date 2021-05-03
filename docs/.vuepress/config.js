@@ -40,6 +40,12 @@ module.exports = {
             items: [
               { text: 'Node', link: '/node/' }
             ]
+          },
+          {
+            text: '其他',
+            items: [
+              { text: '其他', link: '/other/' }
+            ]
           }
         ]
       },
@@ -56,7 +62,8 @@ module.exports = {
       '/basic/': getBasicSidebar(),
       '/interview/': getInterviewSidebar(),
       '/brower/': getBrowerSidebar(),
-      '/node/': getNodeSidebar()
+      '/node/': getNodeSidebar(),
+      '/other': getOtherSidebar()
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated',
@@ -253,6 +260,19 @@ function getNodeSidebar() {
       sidebarDepth: 2,
       children: [
         ['/node/npm', '那些我们必须掌握的npm知识']
+      ]
+    }
+  ]
+}
+
+function getOtherSidebar() {
+  return [
+    {
+      title: '其他',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        ['/other/style', '一些自己喜欢用的风格规范']
       ]
     }
   ]
