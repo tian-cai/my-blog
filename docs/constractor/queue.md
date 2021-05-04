@@ -53,5 +53,14 @@ class Queue {
 
 ```
 
+### 推荐题目(应该掌握的题目)
+- 简单
+    - [933. 最近的请求次数](https://leetcode-cn.com/problems/number-of-recent-calls/)
+- 中等
+    - [199. 二叉树的右视图](https://leetcode-cn.com/problems/binary-tree-right-side-view/)
+    - [622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)
+
 ### 参考文章
 - javascript数据结构与算法第三版
+- [leetcode-队列](https://leetcode-cn.com/tag/queue/problemset/)
+- [力扣加加-数据结构](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure)
