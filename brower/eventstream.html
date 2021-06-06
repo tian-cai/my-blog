@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事件三个阶段 | 阿呆的博客</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="阿呆的博客">
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.c06eed79.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.f9653708.js" as="script"><link rel="preload" href="/my-blog/assets/js/2.f684cb2c.js" as="script"><link rel="preload" href="/my-blog/assets/js/48.fe3f9f52.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/10.4a8c85da.js"><link rel="prefetch" href="/my-blog/assets/js/11.992fdd81.js"><link rel="prefetch" href="/my-blog/assets/js/12.6921927c.js"><link rel="prefetch" href="/my-blog/assets/js/13.c4257dad.js"><link rel="prefetch" href="/my-blog/assets/js/14.1a3115e4.js"><link rel="prefetch" href="/my-blog/assets/js/15.364207bf.js"><link rel="prefetch" href="/my-blog/assets/js/16.11bbe38e.js"><link rel="prefetch" href="/my-blog/assets/js/17.977bef3a.js"><link rel="prefetch" href="/my-blog/assets/js/18.3f0bb53e.js"><link rel="prefetch" href="/my-blog/assets/js/19.b1aafcd2.js"><link rel="prefetch" href="/my-blog/assets/js/20.c40f9fee.js"><link rel="prefetch" href="/my-blog/assets/js/21.3b2ef3bc.js"><link rel="prefetch" href="/my-blog/assets/js/22.255dbd10.js"><link rel="prefetch" href="/my-blog/assets/js/23.4927d8e9.js"><link rel="prefetch" href="/my-blog/assets/js/24.e5b86873.js"><link rel="prefetch" href="/my-blog/assets/js/25.5e120c60.js"><link rel="prefetch" href="/my-blog/assets/js/26.00f6f0be.js"><link rel="prefetch" href="/my-blog/assets/js/27.cf832992.js"><link rel="prefetch" href="/my-blog/assets/js/28.d3658dee.js"><link rel="prefetch" href="/my-blog/assets/js/29.99526cfa.js"><link rel="prefetch" href="/my-blog/assets/js/3.af11628b.js"><link rel="prefetch" href="/my-blog/assets/js/30.27df895e.js"><link rel="prefetch" href="/my-blog/assets/js/31.591df076.js"><link rel="prefetch" href="/my-blog/assets/js/32.d22bc635.js"><link rel="prefetch" href="/my-blog/assets/js/33.5f9e002b.js"><link rel="prefetch" href="/my-blog/assets/js/34.6f97eca8.js"><link rel="prefetch" href="/my-blog/assets/js/35.233ef6db.js"><link rel="prefetch" href="/my-blog/assets/js/36.e05c3bec.js"><link rel="prefetch" href="/my-blog/assets/js/37.2993e97c.js"><link rel="prefetch" href="/my-blog/assets/js/38.0244bd51.js"><link rel="prefetch" href="/my-blog/assets/js/39.5555ca57.js"><link rel="prefetch" href="/my-blog/assets/js/4.b5baf35d.js"><link rel="prefetch" href="/my-blog/assets/js/40.815f9102.js"><link rel="prefetch" href="/my-blog/assets/js/41.13ac71da.js"><link rel="prefetch" href="/my-blog/assets/js/42.5fbf5db3.js"><link rel="prefetch" href="/my-blog/assets/js/43.cd4b6eb0.js"><link rel="prefetch" href="/my-blog/assets/js/44.ac6a949e.js"><link rel="prefetch" href="/my-blog/assets/js/45.d8e7d1ad.js"><link rel="prefetch" href="/my-blog/assets/js/46.f6ef0cb7.js"><link rel="prefetch" href="/my-blog/assets/js/47.98da9bf7.js"><link rel="prefetch" href="/my-blog/assets/js/49.1f19da7e.js"><link rel="prefetch" href="/my-blog/assets/js/5.3453e5ea.js"><link rel="prefetch" href="/my-blog/assets/js/50.15cd54e1.js"><link rel="prefetch" href="/my-blog/assets/js/51.d52d5f73.js"><link rel="prefetch" href="/my-blog/assets/js/52.2daf8569.js"><link rel="prefetch" href="/my-blog/assets/js/53.8c7d95ec.js"><link rel="prefetch" href="/my-blog/assets/js/54.0d16c851.js"><link rel="prefetch" href="/my-blog/assets/js/55.57b6267e.js"><link rel="prefetch" href="/my-blog/assets/js/56.93294fa3.js"><link rel="prefetch" href="/my-blog/assets/js/57.3f204020.js"><link rel="prefetch" href="/my-blog/assets/js/58.b016f1e2.js"><link rel="prefetch" href="/my-blog/assets/js/59.06e44a52.js"><link rel="prefetch" href="/my-blog/assets/js/6.191f4a09.js"><link rel="prefetch" href="/my-blog/assets/js/60.6d3d6018.js"><link rel="prefetch" href="/my-blog/assets/js/61.1f7bcdad.js"><link rel="prefetch" href="/my-blog/assets/js/62.ca39e9d4.js"><link rel="prefetch" href="/my-blog/assets/js/63.fed4f64f.js"><link rel="prefetch" href="/my-blog/assets/js/64.704deb31.js"><link rel="prefetch" href="/my-blog/assets/js/65.04b0252d.js"><link rel="prefetch" href="/my-blog/assets/js/66.25ec1ed4.js"><link rel="prefetch" href="/my-blog/assets/js/67.78ed5d47.js"><link rel="prefetch" href="/my-blog/assets/js/68.a3f54492.js"><link rel="prefetch" href="/my-blog/assets/js/69.6b75ab2b.js"><link rel="prefetch" href="/my-blog/assets/js/7.e9013b21.js"><link rel="prefetch" href="/my-blog/assets/js/70.b62569dc.js"><link rel="prefetch" href="/my-blog/assets/js/71.6cb7c1ac.js"><link rel="prefetch" href="/my-blog/assets/js/72.1fc89c24.js"><link rel="prefetch" href="/my-blog/assets/js/73.7662b7db.js"><link rel="prefetch" href="/my-blog/assets/js/74.064b7ab4.js"><link rel="prefetch" href="/my-blog/assets/js/75.f968f46c.js"><link rel="prefetch" href="/my-blog/assets/js/76.f088b326.js"><link rel="prefetch" href="/my-blog/assets/js/77.950a719a.js"><link rel="prefetch" href="/my-blog/assets/js/8.f3b2df01.js"><link rel="prefetch" href="/my-blog/assets/js/9.4237d25f.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.c06eed79.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog/" class="home-link router-link-active"><!----> <span class="site-name">阿呆的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          数据结构与算法
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/constractor/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/my-blog/algorithm/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/my-blog/babel/" class="nav-link">
+  Babel
+</a></li></ul></li><li class="dropdown-item"><h4>
+          调试工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/devtool/" class="nav-link">
+  chrome devtool
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础与框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/basic/" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/my-blog/brower/" class="nav-link router-link-active">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/other/" class="nav-link">
+  其他
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/my-blog/collectArticle/" class="nav-link">
+  好文收藏
+</a></div><div class="nav-item"><a href="/my-blog/interview/" class="nav-link">
+  面经
+</a></div> <a href="https://github.com/tian-cai/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          数据结构与算法
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/constractor/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/my-blog/algorithm/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/my-blog/babel/" class="nav-link">
+  Babel
+</a></li></ul></li><li class="dropdown-item"><h4>
+          调试工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/devtool/" class="nav-link">
+  chrome devtool
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础与框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/basic/" class="nav-link">
+  基础
+</a></li><li class="dropdown-subitem"><a href="/my-blog/brower/" class="nav-link router-link-active">
+  浏览器
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Node
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/my-blog/other/" class="nav-link">
+  其他
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/my-blog/collectArticle/" class="nav-link">
+  好文收藏
+</a></div><div class="nav-item"><a href="/my-blog/interview/" class="nav-link">
+  面经
+</a></div> <a href="https://github.com/tian-cai/my-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>浏览器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/my-blog/brower/render.html" class="sidebar-link">浏览器渲染原理</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/my-blog/brower/eventstream.html" aria-current="page" class="active sidebar-link">浏览器-事件流</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/my-blog/brower/debounce.html" class="sidebar-link">实现debounce</a></li><li><a href="/my-blog/brower/throttle.html" class="sidebar-link">实现throttle</a></li><li><a href="/my-blog/brower/eventloop.html" class="sidebar-link">浏览器-eventloop</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/my-blog/brower/collectgarbage.html" class="sidebar-link">V8引擎垃圾回收</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="事件三个阶段"><a href="#事件三个阶段" class="header-anchor">#</a> 事件三个阶段</h3> <ol><li>捕获阶段：事件从顶部(window)向下走近元素<div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>child<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">const</span> child <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> parent <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'parent'</span><span class="token punctuation">)</span>
+    child<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'child true'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+    parent<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'parent true'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'window true'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token comment">// 点击child元素，依次打印window true--&gt;parent true--&gt;child true</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li> <li>目标阶段：事件到达目标元素<div class="language-html extra-class"><pre class="language-html"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>child<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">const</span> child <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> parent <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'parent'</span><span class="token punctuation">)</span>
+    child<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'child false'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+
+    child<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'child true'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+    child<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'child second  false'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token comment">// 点击child元素，依次打印child false--&gt;child true--&gt;child second  false</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div>同一个元素事件的触发顺序，就是注册的顺序</li> <li>冒泡阶段：事件从元素上开始向顶层冒泡<div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>child<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">const</span> child <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> parent <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'parent'</span><span class="token punctuation">)</span>
+    child<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'child false'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+
+    parent<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'parent false'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'window false'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token comment">// 点击child元素，依次打印child false--&gt;parent false--&gt;window false</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div>虽然形式上有 3 个阶段，但第 2 阶段（“目标阶段”：事件到达元素）没有被单独处理；<br>
+捕获阶段和冒泡阶段的处理程序都在该阶段被触发</li></ol> <h3 id="addeventlistener"><a href="#addeventlistener" class="header-anchor">#</a> <code>addEventListener</code></h3> <p>我们使用<code>addEventListener</code>来进行事件的监听</p> <ul><li><code>element.addEventListener(event, handler, [options])</code> <ul><li><code>event</code>: 事件名，例如：&quot;click&quot;</li> <li><code>handler</code>: 处理程序</li> <li><code>options</code>: 可选对象，具有三个属性
+<ul><li><code>once</code>：如果为 true，那么会在被触发后自动删除监听器</li> <li><code>capture</code>: 事件处理的阶段，true为捕获，false为冒泡</li> <li><code>passive</code>: 如果为 true，那么处理程序将不会调用 <code>preventDefault()</code></li></ul></li></ul></li> <li>简写形式
+<ul><li><code>element.addEventListener(event, handler, false)</code>等同于<code>element.addEventListener(event, handler, { capture: false})</code></li></ul></li></ul> <h3 id="事件对象"><a href="#事件对象" class="header-anchor">#</a> 事件对象</h3> <ul><li><p>阻止冒泡</p> <ul><li><code>event.stopPropagation()</code> 停止向上冒泡，但是当前元素上的其他处理程序都会继续运行</li> <li><code>event.stopImmediatePropagation()</code> 用于停止冒泡，并阻止当前元素上的其他处理程序运行</li> <li><code>event.cancelBubble = true</code> 停止冒泡，不标准的属性，已废弃，尽量不要使用该特性</li></ul></li> <li><p>阻止浏览器默认行为</p> <ul><li><code>event.preventDefault()</code></li> <li>如果处理程序是使用 <code>on&lt;event&gt;</code>分配的，那返回 <code>false</code> 也同样有效</li> <li><code>event.cancelable = true</code></li></ul></li> <li><p>常见的浏览器默认行为</p> <ul><li>在文本上按下鼠标按钮并移动选中文本。</li> <li>点击一个链接，触发导航到该<code>url</code></li> <li>鼠标右键，显示上下文菜单</li></ul></li> <li><p><code>target</code>与<code>currentTarget</code></p> <ul><li><code>event.target</code>是引发事件的“目标”元素，它在冒泡过程中不会发生变化</li> <li><code>event.currentTarget</code>是“当前”元素，其中有一个当前正在运行的处理程序</li></ul></li></ul> <h3 id="事件委托"><a href="#事件委托" class="header-anchor">#</a> 事件委托</h3> <p>通常用于为许多相似的元素添加相同的处理，不必为每个元素分配一个处理程序，而是将单个处理程序放在它们的共同祖先上。
+在处理程序中，我们获取 <code>event.target</code> 以查看事件实际发生的位置并进行处理。</p> <ul><li>一个小<code>demo</code><br>
+要求点击<code>li</code>元素时，弹出<code>li</code>元素的文本，点击其他元素无反应<div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ul<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">const</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span>
+    ul<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> target <span class="token operator">=</span> event<span class="token punctuation">.</span>target
+        <span class="token keyword">if</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>tagName <span class="token operator">===</span> <span class="token string">'LI'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>innerText<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul> <h3 id="自定义事件"><a href="#自定义事件" class="header-anchor">#</a> 自定义事件</h3> <ul><li>一个小<code>demo</code><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">const</span> testDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;test&quot;</span><span class="token punctuation">)</span>
+    testDom<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> testEvent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Event</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+    testDom<span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span>testEvent<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div>进入页面之后，会有<code>alert</code>弹窗。使用<code>Event</code>构造事件，使用<code>dispatchEvent</code>触发事件</li> <li>事件构造器<br> <ul><li><code>Event</code><br> <ul><li><code>let event = new Event(type, [options])</code> <ul><li><code>type</code>: 事件类型，可以是像这样 &quot;click&quot; 的字符串</li> <li><code>options</code>: 具有两个可选属性的对象
+<ul><li><code>bubbles</code>: 如果为 true，那么事件会冒泡</li> <li><code>cancelable</code>: 如果为 true，那么“默认行为”就会被阻止</li></ul></li></ul></li></ul></li> <li><code>CustomEvent</code><br>
+在第二个参数中，我们可以添加一个附加的属性 <code>detail</code>，剩下的和 <code>Event</code> 一样</li></ul></li> <li><code>event.isTrusted</code><br>
+来自真实用户操作的事件，<code>event.isTrusted</code> 属性为 <code>true</code> ;
+对于脚本生成的事件，<code>event.isTrusted</code> 属性为 <code>false</code></li></ul> <h3 id="参考文章"><a href="#参考文章" class="header-anchor">#</a> 参考文章</h3> <ul><li><a href="https://zh.javascript.info/" target="_blank" rel="noopener noreferrer">现代 JavaScript 教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/tian-cai/my-blog/edit/master/docs/brower/eventstream.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/6/2021, 3:31:05 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/my-blog/brower/render.html" class="prev">
+        浏览器渲染原理
+      </a></span> <span class="next"><a href="/my-blog/brower/debounce.html">
+        实现debounce
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/my-blog/assets/js/app.f9653708.js" defer></script><script src="/my-blog/assets/js/2.f684cb2c.js" defer></script><script src="/my-blog/assets/js/48.fe3f9f52.js" defer></script>
+  </body>
+</html>
